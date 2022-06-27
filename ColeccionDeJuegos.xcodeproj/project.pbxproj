@@ -14,6 +14,7 @@
 		E8826F14286988D100F19C40 /* ColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8826F12286988D100F19C40 /* ColeccionDeJuegos.xcdatamodeld */; };
 		E8826F16286988D300F19C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8826F15286988D300F19C40 /* Assets.xcassets */; };
 		E8826F19286988D300F19C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8826F17286988D300F19C40 /* LaunchScreen.storyboard */; };
+		E8826F2128698D8900F19C40 /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8826F2028698D8900F19C40 /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E8826F15286988D300F19C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8826F18286988D300F19C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8826F1A286988D300F19C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8826F2028698D8900F19C40 /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E8826F17286988D300F19C40 /* LaunchScreen.storyboard */,
 				E8826F1A286988D300F19C40 /* Info.plist */,
 				E8826F12286988D100F19C40 /* ColeccionDeJuegos.xcdatamodeld */,
+				E8826F2028698D8900F19C40 /* JuegosViewController.swift */,
 			);
 			path = ColeccionDeJuegos;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8826F2128698D8900F19C40 /* JuegosViewController.swift in Sources */,
 				E8826F0E286988D100F19C40 /* ViewController.swift in Sources */,
 				E8826F0A286988D100F19C40 /* AppDelegate.swift in Sources */,
 				E8826F0C286988D100F19C40 /* SceneDelegate.swift in Sources */,
