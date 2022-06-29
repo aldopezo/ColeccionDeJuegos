@@ -29,6 +29,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        self.tableView.isEditing = true
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        setEditing(true, animated: true)
         // Do any additional setup after loading the view.
     }
     
@@ -41,6 +44,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let juego = juegos[indexPath.row]
+        performSegue(withIdentifier: "juegoSegue", sender: juego)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let siguienteVC = segue.destination as! JuegosViewController
+        siguienteVC.juego = sender as? Juego
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            juegos.remove(at: indexPath.row)
+            tableView.reloadData()
+        }else if editingStyle == .insert {
+            
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let objetoMovido = self.juegos[fromIndexPath.row]
+        juegos.remove(at: fromIndexPath.row)
+        juegos.insert(objetoMovido, at: to.row)
+        NSLog("%@", "\(fromIndexPath.row) => \(to.row) \(juegos)")
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing,animated: animated)
+        if (self.isEditing) {
+            self.editButtonItem.title = "Editar"
+        }
+        else {
+            self.editButtonItem.title = "Hecho"
+        }
+    }
+    
 
 
 
